@@ -1,6 +1,6 @@
 import {Listbox} from "@headlessui/react";
 import {useState} from "react";
-import selectSvg from "../../data/svg/select.svg"
+import selectSvg from "../../../assets/svg/select.svg"
 
 export default function Select(selectProps : SelectProps) {
     const [selectedNumber, setSelectedNumber] = useState(selectProps.selectedItem.value)

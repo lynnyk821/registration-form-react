@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.font-raleway{
-    font-family: Raleway, sans-serif;
-}
-
-.font-poppins {
-    font-family: Poppins, sans-serif;
-}
-
-.font-roboto {
-    font-family: Roboto, sans-serif;
-}

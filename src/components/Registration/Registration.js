@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../Layout/Layout";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import Layout from "../сommons/Layout/Layout";
+import ProgressBar from "../сommons/ProgressBar/ProgressBar";
 
-import Title from "../Title/Title";
+import Title from "../сommons/Title/Title";
 import {registrationNotificationMessage, registrationTitleContentData} from "./registrationData";
-import Notification from "../Notification/Notification";
-import PhoneForm from "../PhoneForm/PhoneForm";
+import Notification from "./Notification/Notification";
+import PhoneForm from "./PhoneForm/PhoneForm";
 
 export default function Registration() {
     const RegistrationContainer = ({children}) => {

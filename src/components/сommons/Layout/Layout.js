@@ -1,8 +1,8 @@
-import logoSvg from "../../data/svg/logo.svg"
-import mutedSvg from "../../data/svg/defaultX.svg"
+import logoSvg from "../../../assets/svg/logo.svg"
+import mutedSvg from "../../../assets/svg/defaultX.svg"
 
-import Logo from "../Logo/Logo";
-import MutedButton from "../MutedButton/MutedButton";
+import Logo from "./Logo/Logo";
+import MutedButton from "./MutedButton/MutedButton";
 
 export default function Layout({children}){
     const LayoutContainer = ({children}) => {

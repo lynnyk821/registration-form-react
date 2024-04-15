@@ -1,9 +1,9 @@
 import {Button} from "./Button";
 import {Label} from "./Label";
 import {Input} from "./Input";
-import Select from "../Select/Select";
+import Select from "../../сommons/Select/Select";
 
-import {numbers} from "../Registration/registrationData";
+import {numbers} from "../registrationData";
 
 export default function PhoneForm(){
     return (

@@ -9,6 +9,6 @@ export const numbers = [
     { id: 0, value: "+1" },
     { id: 1, value: "+10" },
     { id: 2, value: "+100" },
-    { id: 3, value: "+380" },
-    { id: 4, value: "+1000" },
+    { id: 3, value: "+1000" },
+    { id: 4, value: "+380" },
 ]
