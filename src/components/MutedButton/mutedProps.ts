@@ -1,0 +1,3 @@
+type MutedProps = {
+    src : string,
+}

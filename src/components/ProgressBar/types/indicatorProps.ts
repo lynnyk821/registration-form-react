@@ -1,0 +1,3 @@
+type IndicatorProps = {
+    isActive : boolean,
+}

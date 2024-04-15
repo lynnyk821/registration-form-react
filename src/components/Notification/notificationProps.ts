@@ -1,0 +1,3 @@
+type NotificationProps = {
+    message : string,
+}

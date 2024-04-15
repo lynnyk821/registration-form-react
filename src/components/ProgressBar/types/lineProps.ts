@@ -1,0 +1,3 @@
+type LineProps = {
+    isActive : boolean,
+}
