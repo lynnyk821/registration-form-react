@@ -1,3 +1,0 @@
-type NotificationProps = {
-    message : string,
-}
