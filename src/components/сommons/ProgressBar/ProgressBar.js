@@ -1,6 +1,7 @@
+import React from "react";
+
 import {Indicator} from "./Indicator";
 import {Line} from "./Line";
-
 
 export default function ProgressBar(progressBarProps : ProgressBarProps){
     const getProgressBarArray = (numberOfIndicators : number, activeIndicators : number) => {
@@ -11,10 +12,10 @@ export default function ProgressBar(progressBarProps : ProgressBarProps){
             const isActiveLine = i < activeIndicators - 1;
 
             progressBarArray.push(
-                <>
-                    <Indicator isActive={isActiveIndicator}></Indicator>
+                <React.Fragment key={i}>
+                    <Indicator isActive={isActiveIndicator}/>
                     <Line isActive={isActiveLine}></Line>
-                </>
+                </React.Fragment>
             );
         }
         progressBarArray.push(<Indicator isActive={numberOfIndicators === activeIndicators} key={numberOfIndicators}/>);

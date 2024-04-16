@@ -1,4 +1,4 @@
-interface Item {
+type Item = {
     id: number,
     value: string,
 }
@@ -6,6 +6,7 @@ interface Item {
 type SelectProps = {
     width : string,
     height : string,
-    selectedItem : Item,
+    selectedValue : string,
     items: Item[],
+    onChangeSelectedValue: () => void,
 }

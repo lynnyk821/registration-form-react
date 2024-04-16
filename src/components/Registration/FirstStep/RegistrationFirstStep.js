@@ -1,16 +1,13 @@
 import React from "react";
 import ProgressBar from "../../сommons/ProgressBar/ProgressBar";
 import Title from "../../сommons/Title/Title";
-import {numbers, registrationNotificationMessage, registrationTitleContentData} from "./registrationData";
+import {numbers, registrationNotificationMessage, registrationTitleContentData} from "../data/registrationData";
 import Notification from "./Notification/Notification";
 import PhoneNumberForm from "./PhoneNumberForm/PhoneNumberForm";
 
 export default function RegistrationFirstStep(){
-    const RegistrationContainer = ({children}) => {
-        return (
-            <div className="w-full h-full">{children}</div>
-        );
-    }
+    const RegistrationContainer = ({children}) => { return ( <div className="w-full h-full"> {children} </div> ); }
+
     return (
         <RegistrationContainer>
             <ProgressBar numberOfIndicators={3} activeIndicators={1}/>

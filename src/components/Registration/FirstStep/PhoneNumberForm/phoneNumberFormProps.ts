@@ -1,10 +1,10 @@
-interface Number {
+type PhoneNumber = {
     id: number,
     value: string,
 }
 
 type PhoneNumberFormProps = {
-    numbers: Number[]
+    numbers: PhoneNumber[],
 }
 
 

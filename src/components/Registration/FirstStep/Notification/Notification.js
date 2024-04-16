@@ -19,8 +19,8 @@ export default function Notification(notificationProps : NotificationProps){
         <NotificationContainer isVisible={flag}>
             <img className="w-6 h-6" src={notificationSvg} alt="notification"/>
             <p className="text-sm leading-5 font-poppins">{notificationProps.message}</p>
-            <button className="w-6 h-6" onClick={()=> setFlag(false)}>
-                <img src={smallXSvg} alt={"smallX.svg"}/>
+            <button className="w-6 h-6 shrink-0" onClick={()=> setFlag(false)}>
+                <img className="w-4 h-4"  src={smallXSvg} alt={"smallX.svg"}/>
             </button>
         </NotificationContainer>
     );

@@ -5,18 +5,13 @@ import Logo from "./Logo/Logo";
 import MutedButton from "./MutedButton/MutedButton";
 
 export default function Layout({children}){
-    const LayoutContainer = ({children}) => {
-        return (
-            <div className="w-full min-h-[100vh] py-12 px-24 flex">{children}</div>
-        );
-    }
     const LayoutBucket = ({children}) => {
         return (
             <div className="w-1/3 flex grow-1">{children}</div>
         );
     }
     return (
-        <LayoutContainer>
+        <div className="w-full min-h-[100vh] py-12 px-24 flex">
             {/*Layout Buckets*/}
             <LayoutBucket>
                 <Logo src={logoSvg}>COMPANY NAME</Logo>
@@ -32,6 +27,6 @@ export default function Layout({children}){
                 </div>
             </LayoutBucket>
 
-        </LayoutContainer>
+        </div>
     );
 }

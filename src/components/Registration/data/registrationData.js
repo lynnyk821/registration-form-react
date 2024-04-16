@@ -1,5 +1,5 @@
 export const registrationTitleContentData : string =
-    "Fill in the registration data. It will take a couple of minutes. \n" +
+    "Fill in the registration data. It will take a couple of minutes.\n" +
     "All you need is a phone number and e-mail"
 
 export const registrationNotificationMessage : string =
@@ -12,3 +12,9 @@ export const numbers = [
     { id: 3, value: "+1000" },
     { id: 4, value: "+380" },
 ]
+
+export const maxLenOfPhoneNumber = 10;
+export const maxLenOfMessageCode = 4;
+
+
+export const confirmationCode = "1234";
