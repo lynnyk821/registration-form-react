@@ -1,19 +1,19 @@
-import blueReturnSvg from "../../../../assets/svg/blueReturn.svg"
+import blueReturnSvg from "../../../../../assets/svg/blueReturn.svg"
 import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
-import {formatCodeNumber, getStringWithDigitsClean} from "../../../../helpers/helpers";
-import {confirmationCode, maxLenOfMessageCode} from "../../data/registrationData";
+import {formatCodeNumber, getStringWithDigitsClean} from "../../../../../helpers/helpers";
+import {confirmationCode, maxLenOfMessageCode} from "../../../data/registrationData";
 
 
-export default function ConfirmationForm() {
+export default function ConfirmationForm({path} : {path : string}) {
     const navigate = useNavigate();
     const [inputText, setInputText] = useState("");
     const { handleSubmit } = useForm();
 
     const onSubmit = () => {
-        if(confirmationCode === getStringWithDigitsClean(inputText)){
-            navigate("/registration/3")
+        if(confirmationCode === getStringWithDigitsClean(inputText)) {
+            navigate(path)
         }
     }
 

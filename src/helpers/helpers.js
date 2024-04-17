@@ -16,3 +16,8 @@ export const getStringWithDigitsClean = (inputText) => {
     const stringDigits = getNumber(inputText);
     return stringDigits.toString();
 }
+
+export const getQueryParams = (params: string) => {
+    const queryParams = new URLSearchParams(window.location.search);
+    return queryParams.get(params);
+}

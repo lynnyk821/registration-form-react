@@ -1,9 +1,9 @@
-import Select from "../../../сommons/Select/Select";
+import Select from "../../../../сommons/Select/Select";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom"
 import {useState} from "react";
-import {getStringWithDigitsClean, formatPhoneNumber} from "../../../../helpers/helpers";
-import {maxLenOfPhoneNumber} from "../../data/registrationData";
+import {getStringWithDigitsClean, formatPhoneNumber, getNumber} from "../../../../../helpers/helpers";
+import {maxLenOfPhoneNumber} from "../../../data/registrationData";
 
 
 
@@ -16,11 +16,11 @@ export default function PhoneNumberForm(props : PhoneNumberFormProps){
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
+        const code = getStringWithDigitsClean(selectedValue);
         const phoneNumber = data.phoneNumber;
-        const code = selectedValue.replace("+", "");
 
         if(maxLenOfPhoneNumber === getStringWithDigitsClean(phoneNumber).length){
-            navigate(`/registration/2?code=${code}&number=${phoneNumber}`);
+            navigate(props.path + `?code=${code}&number=${phoneNumber}`);
         }
     }
 

@@ -1,5 +1,5 @@
-import notificationSvg from "../../../../assets/svg/notification.svg"
-import smallXSvg from "../../../../assets/svg/smallX.svg"
+import notificationSvg from "../../../../../assets/svg/notification.svg"
+import smallXSvg from "../../../../../assets/svg/smallX.svg"
 import {useState} from "react";
 
 

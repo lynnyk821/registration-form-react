@@ -5,6 +5,7 @@ type PhoneNumber = {
 
 type PhoneNumberFormProps = {
     numbers: PhoneNumber[],
+    path: string,
 }
 
 

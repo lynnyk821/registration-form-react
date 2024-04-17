@@ -24,7 +24,7 @@ export default function ProgressBar(progressBarProps : ProgressBarProps){
 
     }
     return (
-        <div className="w-full h-5 flex items-center gap-2 mb-14">
+        <div className="w-full h-5 flex items-center gap-2 mb-12">
             {getProgressBarArray(progressBarProps.numberOfIndicators, progressBarProps.activeIndicators)}
         </div>
     );
