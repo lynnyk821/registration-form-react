@@ -4,8 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {FieldLabelLayout} from "./FieldLabelLayout";
 import {Caption} from "./Caption";
 
-
-export default function RegisterForm({path, code, number} : {path : string, code : string, number : string}){
+export default function RegisterForm({path, storage}){
     const navigate = useNavigate();
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
@@ -22,14 +21,9 @@ export default function RegisterForm({path, code, number} : {path : string, code
     }
 
     const onSubmit = () => {
-        const data = {
-            code : code,
-            number : number,
-            email : inputEmail,
-            password : inputPassword,
-        }
-
-        navigate(path + `?data=${encodeURIComponent(JSON.stringify(data))}`);
+        storage.setValue("password", inputPassword);
+        storage.setValue("email", inputPassword);
+        navigate(path);
     }
 
     return (

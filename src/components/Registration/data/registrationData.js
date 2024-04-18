@@ -16,5 +16,4 @@ export const numbers = [
 export const maxLenOfPhoneNumber = 10;
 export const maxLenOfMessageCode = 4;
 
-
 export const confirmationCode = "1234";

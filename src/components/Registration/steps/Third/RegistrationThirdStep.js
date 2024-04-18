@@ -4,20 +4,18 @@ import {registrationTitleContentData} from "../../data/registrationData";
 import React from "react";
 import ConfirmedNotification from "./ConfirmedNotification/ConfirmedNotification";
 import RegisterForm from "./RegisterForm/RegisterForm";
-import {getQueryParams} from "../../../../helpers/helpers";
+import {useStorage} from "../../../../storage/StorageProvider";
+import RegistrationContainer from "../../RegistrationLayout/RegistrationLayout";
 
 export default function RegistrationThirdStep(){
-    const code = ("+" + getQueryParams("code"));
-    const number = getQueryParams("number");
-
-    const RegistrationContainer = ({children}) => { return ( <div className="w-full h-full"> {children} </div> ); }
+    const storage = useStorage();
 
     return (
         <RegistrationContainer>
             <ProgressBar numberOfIndicators={3} activeIndicators={3} />
             <Title name={"Registration"} content={registrationTitleContentData} />
-            <ConfirmedNotification code={code} number={number} />
-            <RegisterForm path={"/profileInfo/1"} code={code} number={number} />
+            <ConfirmedNotification code={storage.getValue("code")} phoneNumber={storage.getValue("phoneNumber")} />
+            <RegisterForm path={"/profileInfo/1"} storage={storage} />
         </RegistrationContainer>
     );
 }

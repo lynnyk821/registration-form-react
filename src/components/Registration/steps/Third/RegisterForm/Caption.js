@@ -1,4 +1,4 @@
-import greenConfirmSvg from "../../../../../assets/svg/registration/greenConfirm.svg"
+import greenConfirmSvg from "../../../../../assets/svg/greenConfirm.svg"
 
 export const Caption = ({password, email} : {password : string, email : string }) => {
     const GoodCaption = ({text}) => {

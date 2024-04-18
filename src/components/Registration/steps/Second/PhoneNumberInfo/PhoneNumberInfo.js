@@ -1,11 +1,12 @@
-import bluePanSvg from "../../../../../assets/svg/registration/bluePan.svg"
+import bluePanSvg from "../../../../../assets/svg/bluePan.svg"
+import {useStorage} from "../../../../../storage/StorageProvider";
 
-export default function PhoneNumberInfo({code, number} : PhoneNumberInfoProps) {
+export default function PhoneNumberInfo({code, phoneNumber} : PhoneNumberInfoProps) {
     return (
         <div className="h-20 px-4 py-3 rounded-lg border-[1px] border-solid border-[#E2E4E5] flex flex-col mb-8">
             <div className="flex items-center gap-2 text-lg font-normal mb-1">
                 <p>{code}</p>
-                <p>{number}</p>
+                <p>{phoneNumber}</p>
             </div>
             <div className="flex">
                 <p className="w-full text-sm text-[#575F6E] font-poppins">

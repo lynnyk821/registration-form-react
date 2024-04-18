@@ -2,25 +2,24 @@ import Select from "../../../../сommons/Select/Select";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom"
 import {useState} from "react";
-import {getStringWithDigitsClean, formatPhoneNumber, getNumber} from "../../../../../helpers/helpers";
+import {getStringWithDigitsClean, formatPhoneNumber} from "../../../../../utils/helpers";
 import {maxLenOfPhoneNumber} from "../../../data/registrationData";
-
-
+import {useStorage} from "../../../../../storage/StorageProvider";
 
 export default function PhoneNumberForm(props : PhoneNumberFormProps){
     const navigate = useNavigate();
-
-    const [selectedValue, setSelectedValue] = useState(props.numbers[0].value);
+    const { setValue } = useStorage();
+    const [selectedCode, setSelectedCode] = useState(props.numbers[0].value);
     const [inputText, setInputText] = useState("");
-
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        const code = getStringWithDigitsClean(selectedValue);
         const phoneNumber = data.phoneNumber;
 
         if(maxLenOfPhoneNumber === getStringWithDigitsClean(phoneNumber).length){
-            navigate(props.path + `?code=${code}&number=${phoneNumber}`);
+            setValue("code", selectedCode);
+            setValue("phoneNumber", data.phoneNumber);
+            navigate(props.path);
         }
     }
 
@@ -29,7 +28,6 @@ export default function PhoneNumberForm(props : PhoneNumberFormProps){
         const formattedText = formatPhoneNumber(event.target.value);
 
         if (getStringWithDigitsClean(formattedText).length <= maxLenOfPhoneNumber) {
-            console.log(event.target.value);
             setInputText(formattedText);
         }
     }
@@ -43,8 +41,8 @@ export default function PhoneNumberForm(props : PhoneNumberFormProps){
                         {... register("selectedValue") }
                         width={"5rem"} height={"2rem"}
                         items={props.numbers}
-                        selectedValue={selectedValue}
-                        onChangeSelectedValue={setSelectedValue}
+                        selectedValue={selectedCode}
+                        onChangeSelectedValue={setSelectedCode}
                     />
                     <div className="w-full h-8 border-b-[1px] border-solid border-[#E2E4E5]">
                         <input

@@ -11,9 +11,9 @@ import {numbers, registrationNotificationMessage, registrationTitleContentData} 
 export default function RegistrationFirstStep(){
     return (
         <RegistrationContainer>
-            <ProgressBar numberOfIndicators={3} activeIndicators={1}/>
-            <Title name={"Registration"} content={registrationTitleContentData}/>
-            <Notification message={registrationNotificationMessage}/>
+            <ProgressBar numberOfIndicators={3} activeIndicators={1} />
+            <Title name={"Registration"} content={registrationTitleContentData} />
+            <Notification message={registrationNotificationMessage} />
             <PhoneNumberForm numbers={numbers} path={"/registration/2"} />
         </RegistrationContainer>
     );

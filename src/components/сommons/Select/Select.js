@@ -1,6 +1,6 @@
 import { Listbox } from "@headlessui/react";
 import {forwardRef, useState} from "react";
-import selectSvg from "../../../assets/svg/registration/select.svg";
+import selectSvg from "../../../assets/svg/select.svg";
 
 const Select = forwardRef((selectProps : SelectProps, ref) => {
     const [selectedValue, setSelectedValue] = useState(selectProps.selectedValue);

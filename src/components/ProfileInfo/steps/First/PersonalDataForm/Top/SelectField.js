@@ -1,6 +1,6 @@
 import Select from "../../../../../сommons/Select/Select";
 
-const SelectField = ({label}) => {
+const SelectField = ({label, selectedValue, items, onChangeSelectedValue}) => {
 
     return (
         <div className="w-[90%] flex flex-col">
@@ -8,9 +8,9 @@ const SelectField = ({label}) => {
             <Select
                     width={"100%"}
                     height={"auto"}
-                    selectedValue={"12.05.1992"}
-                    items={[{id: 1, value: "12.05.1992"}]}
-                    onChangeSelectedValue={"s"}
+                    selectedValue={selectedValue}
+                    items={items}
+                    onChangeSelectedValue={onChangeSelectedValue}
             />
         </div>
     );

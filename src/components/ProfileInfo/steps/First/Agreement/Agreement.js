@@ -1,5 +1,5 @@
 import {useState} from "react";
-import agreeButtonSvg from "../../../../../assets/svg/profileInfo/agreeButton.svg"
+import agreeButtonSvg from "../../../../../assets/svg/agreeButton.svg"
 
 
 export default function Agreement({text, link, linkText}) {
