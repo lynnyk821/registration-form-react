@@ -1,5 +1,5 @@
-import logoSvg from "../../../assets/svg/logo.svg"
-import mutedSvg from "../../../assets/svg/defaultX.svg"
+import logoSvg from "../../../assets/svg/registration/logo.svg"
+import mutedSvg from "../../../assets/svg/registration/defaultX.svg"
 
 import Logo from "./Logo/Logo";
 import MutedButton from "./MutedButton/MutedButton";

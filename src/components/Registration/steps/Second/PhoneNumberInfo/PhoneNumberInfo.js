@@ -1,4 +1,4 @@
-import bluePanSvg from "../../../../../assets/svg/bluePan.svg"
+import bluePanSvg from "../../../../../assets/svg/registration/bluePan.svg"
 
 export default function PhoneNumberInfo({code, number} : PhoneNumberInfoProps) {
     return (

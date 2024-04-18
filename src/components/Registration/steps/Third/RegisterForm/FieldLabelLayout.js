@@ -1,4 +1,4 @@
-import buttonEyeSvg from "../../../../../assets/svg/buttonEye.svg";
+import buttonEyeSvg from "../../../../../assets/svg/registration/buttonEye.svg";
 
 export const FieldLabelLayout = ({className, label, children, eyeButton}) => {
     return (

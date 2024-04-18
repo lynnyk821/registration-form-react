@@ -17,7 +17,7 @@ export default function RegistrationThirdStep(){
             <ProgressBar numberOfIndicators={3} activeIndicators={3} />
             <Title name={"Registration"} content={registrationTitleContentData} />
             <ConfirmedNotification code={code} number={number} />
-            <RegisterForm path={"/profileInfo/1"} />
+            <RegisterForm path={"/profileInfo/1"} code={code} number={number} />
         </RegistrationContainer>
     );
 }

@@ -1,4 +1,4 @@
-import blueReturnSvg from "../../../../../assets/svg/blueReturn.svg"
+import blueReturnSvg from "../../../../../assets/svg/registration/blueReturn.svg"
 import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";

@@ -1,4 +1,4 @@
-import grayConfirmSvg from "../../../../../assets/svg/grayConfirm.svg"
+import grayConfirmSvg from "../../../../../assets/svg/registration/grayConfirm.svg"
 
 
 export default function ConfirmedNotification({code, number}){

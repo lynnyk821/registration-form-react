@@ -5,7 +5,7 @@ import {FieldLabelLayout} from "./FieldLabelLayout";
 import {Caption} from "./Caption";
 
 
-export default function RegisterForm({path} : {path : string}){
+export default function RegisterForm({path, code, number} : {path : string, code : string, number : string}){
     const navigate = useNavigate();
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
@@ -22,7 +22,14 @@ export default function RegisterForm({path} : {path : string}){
     }
 
     const onSubmit = () => {
-        navigate(path);
+        const data = {
+            code : code,
+            number : number,
+            email : inputEmail,
+            password : inputPassword,
+        }
+
+        navigate(path + `?data=${encodeURIComponent(JSON.stringify(data))}`);
     }
 
     return (
@@ -30,7 +37,7 @@ export default function RegisterForm({path} : {path : string}){
             <div className="h-56 px-6 pt-3 rounded-lg border-[1px] border-solid border-[#E2E4E5]">
                 <FieldLabelLayout className="h-20 flex flex-col" label={"Enter your email"}>
                     <input
-                        className="w-full h-full font-poppins focus:outline-none"
+                        className="w-full h-full px-3 py-1 font-poppins focus:outline-none"
                         value={inputEmail}
                         onChange={handleOnChangeEmailInput}
                         placeholder="alex_manager@gmail.com"
