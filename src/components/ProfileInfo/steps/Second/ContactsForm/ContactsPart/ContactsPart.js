@@ -1,4 +1,4 @@
-import TitleInfo from "./TitleInfo";
+import TitleInfo from "../TitleInfo";
 import InfoField from "./InfoField";
 import letterSvg from "../../../../../../assets/svg/letter.svg";
 import phoneSvg from "../../../../../../assets/svg/phone.svg";

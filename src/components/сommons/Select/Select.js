@@ -30,7 +30,7 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
                     storage.setValue(key, value);
                 }
             }}>
-                <Listbox.Button className="w-full px-4 flex items-center " >
+                <Listbox.Button className="w-full h-full px-2 py-4 flex items-center " >
                     <div className="flex">
                         {selectedValue}
                     </div>
@@ -39,13 +39,13 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
                     </div>
                 </Listbox.Button>
                 <Listbox.Options>
-                    <div className={`w-[100%] h-36 overflow-auto border-[1px] bg-white relative`} >
+                    <div className={`h-36 overflow-auto border-[1px] bg-white relative`} >
                         {selectProps.items.map(items => (
                             <Listbox.Option
                                 className={`p-2 cursor-pointer hover:bg-gray-100`}
                                 key={items.id}
                                 value={items.value}
-                                style={{ width: selectProps.width }}
+                                style={{ width: selectProps.widthSelect }}
                             >
                                 {items.value}
                             </Listbox.Option>

@@ -17,8 +17,8 @@ export default function ContactsForm({path}){
     }
 
     return (
-        <form className="h-[37rem] flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-            <div className="h-[30rem] p-8 border-[1px] border-solid border-[#E2E4E5]">
+        <form className="h-[38rem] flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+            <div className="h-[33rem] p-8 rounded-lg border-[1px] border-solid border-[#E2E4E5]">
                 <ContactsPart storage={storage} />
                 <SocialNetworkPart storage={storage} />
             </div>

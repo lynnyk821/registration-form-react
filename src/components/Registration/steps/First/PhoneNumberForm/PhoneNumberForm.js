@@ -39,7 +39,7 @@ export default function PhoneNumberForm(props : PhoneNumberFormProps){
                 <div className="flex gap-4">
                     <Select
                         {... register("selectedValue") }
-                        width={"5rem"} height={"2rem"}
+                        width={"5rem"} height={"2rem"} widthSelect={"7rem"}
                         items={props.numbers}
                         selectedValue={selectedCode}
                         onChangeSelectedValue={setSelectedCode}
