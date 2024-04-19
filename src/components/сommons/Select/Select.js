@@ -1,8 +1,10 @@
 import { Listbox } from "@headlessui/react";
 import {forwardRef, useState} from "react";
 import selectSvg from "../../../assets/svg/select.svg";
+import {useStorage} from "../../../storage/StorageProvider";
 
 const Select = forwardRef((selectProps : SelectProps, ref) => {
+    const storage = useStorage();
     const [selectedValue, setSelectedValue] = useState(selectProps.selectedValue);
 
     const SelectContainer = ({ children }) => {
@@ -21,8 +23,14 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
             <Listbox value={selectedValue} onChange={(value) => {
                 setSelectedValue(value);
                 selectProps.onChangeSelectedValue(value);
+
+                const key = selectProps.keyValue;
+
+                if(key) {
+                    storage.setValue(key, value);
+                }
             }}>
-                <Listbox.Button className="w-full px-4 flex items-center">
+                <Listbox.Button className="w-full px-4 flex items-center " >
                     <div className="flex">
                         {selectedValue}
                     </div>
@@ -31,15 +39,15 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
                     </div>
                 </Listbox.Button>
                 <Listbox.Options>
-                    <div className={`w-[100%] h-36 overflow-auto border-[1px] bg-white relative`}>
-                        {selectProps.items.map(number => (
+                    <div className={`w-[100%] h-36 overflow-auto border-[1px] bg-white relative`} >
+                        {selectProps.items.map(items => (
                             <Listbox.Option
                                 className={`p-2 cursor-pointer hover:bg-gray-100`}
-                                key={number.id}
-                                value={number.value}
+                                key={items.id}
+                                value={items.value}
                                 style={{ width: selectProps.width }}
                             >
-                                {number.value}
+                                {items.value}
                             </Listbox.Option>
                         ))}
                     </div>

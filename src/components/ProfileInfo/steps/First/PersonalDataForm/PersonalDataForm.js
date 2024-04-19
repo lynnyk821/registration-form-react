@@ -7,6 +7,7 @@ import vectorSvg from "../../../../../assets/svg/vector.svg"
 
 export default function PersonalDataForm() {
     const navigate = useNavigate();
+
     const {handleSubmit} = useForm();
 
     const onSubmit = () => {
@@ -15,7 +16,10 @@ export default function PersonalDataForm() {
 
     return (
         <form className="h-[37rem] flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-            <PersonalDataTop title={"Personal Data"} label={"Specify exactly as in your passport"}></PersonalDataTop>
+            <PersonalDataTop
+                title={"Personal Data"}
+                label={"Specify exactly as in your passport"}
+            />
             <PersonalDataBottom itin={"123-45-678"} />
             <div className={"mt-auto"}>
                 <PersonalDataButton type={"submit"}>

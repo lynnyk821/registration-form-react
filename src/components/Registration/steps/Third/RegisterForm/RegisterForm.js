@@ -22,7 +22,7 @@ export default function RegisterForm({path, storage}){
 
     const onSubmit = () => {
         storage.setValue("password", inputPassword);
-        storage.setValue("email", inputPassword);
+        storage.setValue("email", inputEmail);
         navigate(path);
     }
 

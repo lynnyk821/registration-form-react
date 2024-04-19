@@ -1,3 +1,8 @@
+import skypeSVG from "../../../assets/svg/skype.svg"
+import phoneSVG from "../../../assets/svg/phone.svg"
+import facebookSVG from "../../../assets/svg/facebook.svg"
+
+
 export const profileInfoTitleContent =
     "Fill in the data for profile. It will take a couple of minutes. \n" +
     "You only need a passport"
@@ -15,3 +20,17 @@ export const placesOfBirth = [
     { id: 3, value: "Scottdale, USA" },
     { id: 4, value: "Chandler, USA" },
 ];
+
+export const firstMedias = [
+    {id: 0, value: "Skype"},
+    {id: 1, value: "Discord"},
+    {id: 2, value: "Viber"},
+    {id: 3, value: "Whatsap"},
+]
+
+export const secondMedias = [
+    {id: 0, value: "Facebook"},
+    {id: 1, value: "Telegram"},
+    {id: 2, value: "Instagram"},
+    {id: 3, value: "Twitter/X"},
+]
