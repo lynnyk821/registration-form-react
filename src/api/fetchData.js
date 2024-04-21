@@ -1,31 +1,34 @@
-async function fetchData(url) {
+export async function fetchData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        const data = await response.json();
-        return data;
+        return await response.json();
     } catch (error) {
         console.error('There was a problem fetching the data:', error);
         return null;
     }
 }
 
-function getCountries(data) {
+export function getCountries(data) {
     if (!data || !data.data) {
         console.error('Invalid data format');
         return [];
     }
     const countries = data.data.map(entry => entry.country);
-    return Array.from(countries);
+    return Array.from(new Set(countries));
 }
 
-function getCities(data) {
+export function getCitiesWithCountries(data) {
     if (!data || !data.data) {
         console.error('Invalid data format');
         return [];
     }
-    const cities = data.data.map(entry => entry.city);
-    return Array.from(cities);
+
+    const citiesWithCountries = data.data.map(entry => ({
+        city: entry.city,
+        country: entry.country
+    }));
+    return Array.from(citiesWithCountries);
 }

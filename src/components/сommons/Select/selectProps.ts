@@ -9,6 +9,7 @@ type SelectProps = {
     height : string,
     padding: string,
     selectedValue : string,
+    disabled : boolean,
     items: Item[],
     keyValue : string,
     onChangeSelectedValue: () => void,

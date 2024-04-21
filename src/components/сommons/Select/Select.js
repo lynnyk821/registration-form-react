@@ -39,18 +39,22 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
                     </div>
                 </Listbox.Button>
                 <Listbox.Options>
-                    <div className={`h-36 overflow-auto border-[1px] bg-white relative`} >
-                        {selectProps.items.map(items => (
-                            <Listbox.Option
-                                className={`p-2 cursor-pointer hover:bg-gray-100`}
-                                key={items.id}
-                                value={items.value}
-                                style={{ width: selectProps.widthSelect }}
-                            >
-                                {items.value}
-                            </Listbox.Option>
-                        ))}
-                    </div>
+                    { selectProps.disabled ? null
+                        : <div className={`h-36 overflow-auto border-[1px] bg-white relative`} >
+
+                            {selectProps.items.map(items => (
+                                <Listbox.Option
+                                    className={`p-2 cursor-pointer hover:bg-gray-100`}
+                                    key={items.id}
+                                    value={items.value}
+                                    style={{ width: selectProps.widthSelect }}
+                                >
+                                    {items.value}
+                                </Listbox.Option>
+                            ))}
+                        </div>
+                    }
+
                 </Listbox.Options>
             </Listbox>
         </SelectContainer>

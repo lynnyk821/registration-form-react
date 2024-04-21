@@ -9,6 +9,7 @@ export default function DeliveryAddressSelectField(props : DeliveryAddressSelect
             <Select width={"100%"} height={"3.75rem"} widthSelect={props.widthSelected} padding={"15px"}
                     selectedValue={props.selectedValue}
                     items={props.items}
+                    disabled={props.disabled}
                     keyValue={props.keyValue}
                     onChangeSelectedValue={props.onChangeSelectedValue}
             />
