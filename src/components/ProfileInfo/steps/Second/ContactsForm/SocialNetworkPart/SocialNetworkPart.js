@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {firstMedias, secondMedias} from "../../../../data/profileInfoData";
 import SocialMediaFieldLayout from "./SocialMediaFieldLayout";
-import TitleInfo from "../TitleInfo";
+import TitleInfo from "../../../TitleInfo";
 
 export default function SocialNetworkPart({storage}){
     const [firstMediaInput, setFirstMediaInput] = useState("");
@@ -11,7 +11,7 @@ export default function SocialNetworkPart({storage}){
     const [selectedSecondMedia, setSelectedSecondMedia] = useState("Choose second media");
 
     return (
-        <div className="flex flex-col gap-6 mt-5">
+        <div className="flex flex-col gap-6  mt-5">
             <TitleInfo title={"Social network"} label={"Indicate the desired communication method"} />
             <SocialMediaFieldLayout
                 inputValue={firstMediaInput}

@@ -13,8 +13,10 @@ export const StorageProvider = ({ children }) => {
         return storage[key];
     };
 
+    const getStorageItems = () => storage;
+
     return (
-        <StorageContext.Provider value={{ setValue, getValue }}>
+        <StorageContext.Provider value={{ setValue, getValue, getStorageItems }}>
             {children}
         </StorageContext.Provider>
     );

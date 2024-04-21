@@ -7,6 +7,7 @@ type SelectProps = {
     width : string,
     widthSelect: string,
     height : string,
+    padding: string,
     selectedValue : string,
     items: Item[],
     keyValue : string,

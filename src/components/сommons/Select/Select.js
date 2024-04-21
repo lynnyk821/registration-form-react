@@ -30,7 +30,7 @@ const Select = forwardRef((selectProps : SelectProps, ref) => {
                     storage.setValue(key, value);
                 }
             }}>
-                <Listbox.Button className="w-full h-full px-2 py-4 flex items-center " >
+                <Listbox.Button className="w-full h-full flex items-center" style={{padding: selectProps.padding}} >
                     <div className="flex">
                         {selectedValue}
                     </div>

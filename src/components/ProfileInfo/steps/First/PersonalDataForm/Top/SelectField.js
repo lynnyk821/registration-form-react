@@ -8,6 +8,7 @@ const SelectField = ({label, selectedValue, items, onChangeSelectedValue, keyVal
                     width={"100%"}
                     height={"auto"}
                     widthSelect={"15rem"}
+                    padding={"6px"}
                     selectedValue={selectedValue}
                     items={items}
                     keyValue={keyValue}
